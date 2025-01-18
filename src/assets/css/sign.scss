@@ -1,0 +1,72 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+::v-deep .el-dialog__wrapper{
+    .el-dialog{
+      width: 650px;
+    }
+   .el-tabs__nav-scroll {
+    display: flex;
+    justify-content: center;
+  }
+  .el-tabs__content{
+    background-color: #00284e;
+    .el-button:nth-child(odd){
+      width:50%
+    }
+  }
+  .login-panel {
+    height: 350px;
+    @include flexCenter;
+    width:400px;
+    margin:0 auto;
+    flex-direction: column;
+   
+    .el-form{
+      width:100%;
+      .forgetPwd{
+        text-align: center;
+        color:#409EFF;
+        cursor: pointer;
+        margin-bottom: 20px;
+      }
+      .forgetPwd:hover{
+        text-decoration: underline;
+      }
+      .btn-wrapper{
+        @include flexCenter;
+      }
+     
+    }
+  }
+  .register-panel {
+    height: 350px;
+    width: 400px;
+    @include flexCenter;
+    margin:auto;
+    flex-direction: column;
+    .btn-wrapper{
+      @include flexCenter;
+    }
+    .getCode {
+      display: table;
+      width: 400px;
+      .input-code {
+        display: table-cell;
+        width: 80%;
+      }
+    }
+    p{
+      margin-top:10px;
+      font-size:15px;
+      color:#8e8e8e;
+      em{
+        color:rgb(68, 155, 255);
+        font-size:15px;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .daily-rank {
+    margin: 0 auto;
+    max-width: 2560px;
+    height: 480px;
+    border-radius: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 70px;
+    margin-top: 30px;
+    background-color: #ffffff73;
+    position: relative;
+    .left-arrow {
+      position: absolute;
+      width: 60px;
+      height: 430px;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 28px;
+      overflow: hidden;
+      @include flexCenter;
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+
+      z-index: 5;
+      background: linear-gradient(to left, rgba(0, 0, 0, 0), #00284e);
+    }
+    .right-arrow {
+      position: absolute;
+      right: 0;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 28px;
+      width: 60px;
+      height: 430px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      overflow: hidden;
+      @include flexCenter;
+      z-index: 5;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0), #00284e);
+    }
+    ul{
+      overflow: hidden;
+    }
+    .content-list {
+      display: inline-flex;
+    }
+  }
+

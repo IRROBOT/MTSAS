@@ -1,0 +1,16 @@
+.accessories {
+    margin: 0 auto;
+    max-width: 2560px;
+    margin-bottom: 70px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 10px;
+    background-color: #ffffff73;
+
+  }
+  .goods-list {
+    width: 100%;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }

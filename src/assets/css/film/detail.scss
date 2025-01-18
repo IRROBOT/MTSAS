@@ -1,0 +1,332 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .comment-port:hover {
+    color: gold;
+    text-decoration: underline;
+  }
+  ::v-deep .el-dialog {
+    height: auto;
+  }
+  .movie-detail {
+    max-width: 2560px;
+    position: relative;
+    margin: 0 auto;
+    background-color: #00284e;
+    padding-top: 40px;
+    .movie-container {
+      width: 1400px;
+      height: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      .poster-container {
+        height: 90%;
+        flex: 0.4;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .img-container {
+          min-height: 370px;
+          padding: 5px;
+          margin: 0 auto;
+          background-color: rgb(255, 255, 255);
+          border-radius: 5px;
+          box-shadow: 0 8px 5px 1px #00000069;
+          img {
+            width: 100%;
+            border-radius: 5px;
+            object-fit: cover;
+          }
+        }
+        .collection {
+          width: 67%;
+          height: 200px;
+          margin: 0 auto;
+          background-color: white;
+          border-radius: 5px;
+          @include flexCenter;
+          box-shadow: 0 8px 5px 1px #00000069;
+          ::v-deep .el-statistic {
+            flex: 0.7;
+            font-size: 35px;
+            .head {
+              font-size: 20px;
+            }
+          }
+          .collect {
+            flex: 0.3;
+            .heart-wrapper {
+              width: 40px;
+              height: 40px;
+              i {
+                font-size: 40px;
+                color: gray;
+              }
+            }
+          }
+        }
+      }
+      .movie-info-container {
+        padding: 20px;
+        flex: 0.6;
+        height: 91%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .movie-title {
+          font-size: 24px;
+          background-color: white;
+          box-shadow: 0 8px 5px 1px #00000069;
+          border-radius: 5px;
+          padding: 2px 4px;
+          margin: 0;
+        }
+        .movie-score {
+          width: max-content;
+          display: flex;
+          background-color: white;
+          border-radius: 5px;
+          box-shadow: 0 8px 5px 1px #00000069;
+          ::v-deep .el-rate {
+            span {
+              i {
+                font-size: 35px;
+              }
+            }
+          }
+          span {
+            font-size: 30px;
+          }
+        }
+        .relate-info {
+          width: 860px;
+          display: flex;
+          flex-direction: column;
+          background-color: white;
+          border-radius: 10px;
+          padding: 10px;
+          box-shadow: 0 8px 5px 1px #00000069;
+          label {
+            font-size: 20px;
+            color: #393939;
+            p {
+              width: 100%;
+              color: black;
+              overflow-wrap: break-word;
+              font-size: 18px;
+              font-weight: bolder;
+            }
+          }
+        }
+      }
+    }
+    .bottom-info-box {
+      width: 1400px;
+      height: 320px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      font-size: 24px;
+      ::v-deep .el-tabs {
+        width: 80%;
+        background-color: white;
+        box-shadow: 0 8px 5px 1px #00000069;
+        border-radius: 10px;
+        padding: 35px;
+        overflow: auto;
+        .el-tabs__header {
+          display: flex;
+          justify-content: center;
+  
+          .el-tabs__item {
+            font-size: 28px;
+          }
+        }
+        .el-tabs__content {
+          @include flexCenter;
+          flex-direction: column;
+  
+          ul {
+            width: 100%;
+            overflow: auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            li {
+              display: flex;
+              flex-direction: column;
+              border: 4px solid #00284e;
+              margin-bottom: 5px;
+              margin-right: 5px;
+              padding: 2px;
+              font-size:18px;
+            }
+          }
+          .brief {
+            font-size: 18px;
+            text-indent: 2em;
+          }
+          .my-score {
+            display: flex;
+            margin-bottom: 20px;
+            width: 300px;
+            min-width: 300px;
+            justify-content: space-between;
+            h4 {
+              margin: 0;
+            }
+          }
+          .write-comment {
+            h4 {
+              display: flex;
+              justify-content: space-between;
+              i:hover {
+                color: gold;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .split-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    line-height: 50px;
+    font-size: 50px;
+    max-width: 2560px;
+    border-left: 4px solid gold;
+  }
+  .activeHeart {
+    color: #ff4444 !important;
+  }
+  .movie-comments {
+    width: 100%;
+    background-color: #00284e;
+    margin: 0 auto;
+    max-width: 2560px;
+    .noComment {
+      width: 80%;
+      margin: 0 auto;
+      padding: 10px;
+      color: white;
+      font-size: 24px;
+      text-align: center;
+    }
+    ul {
+      width: 1300px;
+      padding: 10px;
+      margin: 0 auto;
+      //background-color: white;
+      li {
+        width: 100%;
+        height: 180px;
+        background-color: white;
+        display: flex;
+        padding-left: 10px;
+        border-radius: 5px;
+        box-shadow: 0 8px 5px 1px #00000069;
+        margin-bottom: 30px;
+        .left {
+          padding-top: 10px;
+          flex: 0.5;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          margin: 0;
+          p:first-child {
+            width: 400px;
+            font-size: 18px;
+            font-weight: bolder;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin: 0;
+          }
+          p:last-child {
+            color: #999;
+  
+            font-size: 25px;
+            text-indent: 2em;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin: 0;
+          }
+        }
+        .middle {
+          flex: 0.4;
+          padding-left: 100px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .top-single {
+            display: flex;
+            margin-top: 10px;
+            .img-wrapper {
+              width: 80px;
+              height: 80px;
+              border-radius: 50%;
+              border: 1px solid silver;
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+              }
+            }
+            .single-info {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              margin-left: 10px;
+              h3 {
+                width: max-content;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin: 0;
+              }
+              .score {
+                display: flex;
+                span {
+                  display: block;
+                  background-color: #00284e;
+                  color: white;
+                  padding: 0 5px;
+                  border-radius: 3px;
+                }
+              }
+            }
+          }
+          p {
+            font-size: 20px;
+            color: #00000070;
+            margin: 0;
+          }
+        }
+        .right {
+          flex: 0.1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          h2 {
+            color: gray;
+            display: flex; 
+            align-items: center;
+            i {
+              font-size: 27px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .activeLikeUp {
+    color: gold !important;
+  }

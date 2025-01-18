@@ -1,0 +1,142 @@
+.banner-content{
+  max-width:2560px;
+  min-height:600px;
+  max-height: 600px;
+  position: relative; 
+  display:flex;
+  margin:60px auto;
+  justify-content:space-around;
+  overflow: hidden;
+  .carousel{
+    position: relative; 
+    flex:0.6;
+    ::v-deep .el-carousel{
+      width: 100% !important;
+      height:100% !important;
+      .el-carousel__container{
+          height:100% !important;
+          .el-carousel__item{
+         
+          height:100% !important;
+          .shade{
+            cursor: pointer;
+             height:100%;
+            background-image: linear-gradient(to bottom, #ffffff00, #00000000, black);
+            p{
+              display: -webkit-box;
+              -webkit-line-clamp: 3; //最大显示行数
+              -webkit-box-orient: vertical;
+              position: relative;
+               left: 4%;
+              top: 81%;
+              width: 50ch;
+              color: #ffffff69;
+              text-indent: 2em;
+              overflow: hidden;
+              height: 200px;
+              white-space: normal;
+              text-overflow: ellipsis;    
+            }
+          }
+          img{
+             position: relative;
+            top: -100%;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
+          }
+        }
+      }
+      
+    }
+  }
+  .month-rank{
+    position: relative;
+    flex:0.25;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    .title-bar {
+      width: 100%;
+      height: 50px;
+      background-color: white;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #092b74;
+      z-index: 30;
+      overflow: hidden;
+      h2 {
+        text-align: center;
+        color: white;
+      }
+      h2:hover {
+        color: silver;
+      }
+    }
+    .posters-wrapper {
+      width:100%;
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      margin: 0 auto;
+      .poster-wrapper {
+        width:100%;
+        min-height:320px;
+        margin:0 auto;
+        top: 0px;
+        transform: translateY(0px);
+        transition:transform all ease;
+        background-color: #271100e2;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left-bar,
+        .right-bar {
+          height: 320px;
+          display: flex;
+          margin: 0 auto;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          div {
+            width: 35px;
+            height: 35px;
+            border-radius: 2px;
+            background-color: white;
+          }
+        }
+        .midle-poster {
+          width: 60%;
+          min-height: 320px;
+          max-height:320px;
+          overflow: hidden;
+          cursor: pointer;
+          background:black;
+          .rank-text-bar {
+            position: relative;
+            width: 60px;
+            color: #ffa500;
+            i {
+              position: absolute;
+              font-size: 60px;
+            }
+            span {
+              color:white;
+              position: absolute;
+              z-index: 3;
+              left: 18px;
+              top: 20px;
+            }
+          }
+          img {
+            display: block;
+            width: 80%;
+            margin:0 auto;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+    }}
+  }

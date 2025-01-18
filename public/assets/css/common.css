@@ -1,0 +1,18 @@
+
+*{box-sizing: border-box;}
+section{
+	flex:1;
+	overflow: hidden;
+}
+ul{
+	list-style: none;
+	padding-inline-start: 0;
+}
+input{
+	background:none;  
+	outline:none;  
+	border:none;
+}
+input:focus{   
+	border:none;
+}

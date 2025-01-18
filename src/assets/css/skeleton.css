@@ -1,0 +1,36 @@
+@keyframes opacity {
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  ._ {
+    position: absolute;
+    z-index: 999;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0,
+        rgba(255, 255, 255, 0.3) 50%,
+        rgba(255, 255, 255, 0) 100%
+      )
+      0 0/200% 100% #aaa;
+    animation: opacity 1.5s ease infinite;
+  }
+  .__ {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    overflow: hidden;
+    background: #fff;
+  }
+  .skeleton-enter-active {
+    transition: opacity 0.6s;
+  }
+  .skeleton-enter {
+    opacity: 0;
+  }
+  .skeleton-leave-active {
+    transition: opacity 0.6s;
+  }
+  .skeleton-leave-to {
+    opacity: 0;
+  }
